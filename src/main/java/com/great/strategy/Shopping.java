@@ -1,6 +1,6 @@
 package com.great.strategy;
 
-public class Shopping {
+class Shopping {
     boolean userCheckOut(String method, String currency, double amount) {
         PaymentStrategy paymentMethod = null;
         switch (method) {

@@ -1,0 +1,40 @@
+@startuml
+
+interface View {
+  getWidth()
+  getHeight()
+  draw()
+}
+
+class CircleView {
+  getWidth()
+  getHeight()
+  draw()
+}
+
+class SquareView {
+  getWidth()
+  getHeight()
+  draw()
+}
+interface ViewCreator {
+  createView()
+}
+
+class CircleViewCreator {
+  createView()
+}
+
+class SquareViewCreator {
+  createView()
+}
+
+View <|-- CircleView
+View <|-- SquareView
+ViewCreator <|-- CircleViewCreator
+ViewCreator <|-- SquareViewCreator
+CircleViewCreator .right.> "creates" CircleView
+SquareViewCreator .right.> "creates" SquareView
+Application -- ViewCreator : render journey with >
+
+@enduml

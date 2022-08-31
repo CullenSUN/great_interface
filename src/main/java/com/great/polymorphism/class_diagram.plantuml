@@ -1,0 +1,31 @@
+@startuml
+
+interface Player {
+  play()
+  stop()
+  pause()
+}
+
+class CDPlayer {
+  play()
+  stop()
+  pause()
+}
+
+class DVDPlayer {
+  play()
+  stop()
+  pause()
+}
+
+class TapePlayer {
+  play()
+  stop()
+  pause()
+}
+
+Player <|-- CDPlayer
+Player <|-- DVDPlayer
+Player <|-- TapePlayer
+
+@enduml

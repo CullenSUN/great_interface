@@ -1,0 +1,28 @@
+@startuml
+
+interface PaymentStrategy {
+  verifyIdentity()
+  processPayment(String, double)
+}
+
+class ApplePayImplementation {
+  verifyIdentity()
+  processPayment(String, double)
+}
+
+class AliPayImplementation {
+  verifyIdentity()
+  processPayment(String, double)
+}
+
+class VisaPayImplementation {
+  verifyIdentity()
+  processPayment(String, double)
+}
+
+PaymentStrategy <|-- ApplePayImplementation
+PaymentStrategy <|-- AliPayImplementation
+PaymentStrategy <|-- VisaPayImplementation
+Shopping -right- PaymentStrategy : checkOut with >
+
+@enduml

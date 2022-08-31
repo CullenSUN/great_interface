@@ -1,7 +1,7 @@
 package com.great.factorymethod.CircleJourney;
 import com.great.factorymethod.Common.View;
 
-class CircleView extends View {
+class CircleView implements View {
 
     @Override
     public double getWidth() {

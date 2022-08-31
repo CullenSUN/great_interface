@@ -1,0 +1,28 @@
+@startuml
+
+interface Printer {
+  print(String, PrintingMode)
+}
+
+class NewPrinter {
+  print(String, PrintingMode)
+}
+
+class OldPrinter {
+  setBlackAndWhiteMode()
+  setColorMode()
+  print(String)
+}
+
+class OldPrinterAdapter {
+  - oldPrinter: OldPrinter
+  print(String, PrintingMode)
+}
+
+Printer <|-- NewPrinter
+Printer <|-- OldPrinterAdapter
+OldPrinterAdapter *-- "1" OldPrinter : has
+
+Client -right- Printer : print with >
+
+@enduml

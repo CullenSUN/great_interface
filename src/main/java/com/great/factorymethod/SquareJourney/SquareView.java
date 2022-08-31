@@ -1,7 +1,7 @@
 package com.great.factorymethod.SquareJourney;
 import com.great.factorymethod.Common.View;
 
-class SquareView extends View {
+class SquareView implements View {
 
     @Override
     public double getWidth() {
