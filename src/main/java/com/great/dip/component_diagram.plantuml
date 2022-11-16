@@ -1,0 +1,10 @@
+@startuml
+
+
+component CallSDK 
+component Application 
+
+Application --> CallSDK : use
+
+
+@enduml
