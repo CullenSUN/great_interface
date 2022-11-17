@@ -1,7 +1,6 @@
 package com.great.refactor.after;
 import java.time.LocalDate;
 
-
 public class Booking {
     public enum Result {
         FAILURE,
